@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
+
+gem 'bootstrap-sass',   '>= 3.1.0'   
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
