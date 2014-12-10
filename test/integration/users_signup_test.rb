@@ -14,6 +14,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                password_confirmation: "bar" }
     end
     assert_template 'users/new'
+    assert_select 'div#error_explanation'
+    assert_select 'div.alert' # alert-danger didn't work
   end
 
   test "valid entries should create new user" do
@@ -25,6 +27,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             password_confirmation: 'giggidy' }
     end
     assert_template 'users/show'
+    assert_not flash.nil?
   end
 
 
